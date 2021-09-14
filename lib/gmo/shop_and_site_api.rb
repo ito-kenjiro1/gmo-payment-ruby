@@ -103,6 +103,28 @@ module GMO
         post_request name, options
       end
 
+      def register_recurring_credit(options = {})
+        name = "RegisterRecurringCredit.idPass"
+        required = [:recurring_id, :charge_day, :amount, :tax, :regist_type, :member_id]
+        assert_required_options(required, options)
+        post_request name, options
+      end
+
+      def change_recurring(options = {})
+        name = "ChangeRecurring.idPass"
+        required = [:recurring_id, :amount, :tax]
+        assert_required_options(required, options)
+        post_request name, options
+      end
+
+      def unregister_recurring(options = {})
+        name = "UnregisterRecurring.idPass"
+        required = [:recurring_id]
+        assert_required_options(required, options)
+        post_request name, options
+      end
+
+
       private
 
         def api_call(name, args = {}, verb = "post", options = {})
