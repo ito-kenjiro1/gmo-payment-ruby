@@ -105,7 +105,7 @@ module GMO
 
       def register_recurring_credit(options = {})
         name = "RegisterRecurringCredit.idPass"
-        required = [:recurring_id, :charge_day, :amount, :tax, :regist_type, :member_id]
+        required = [:recurring_id, :token, :regist_type, :member_id]
         assert_required_options(required, options)
         post_request name, options
       end
