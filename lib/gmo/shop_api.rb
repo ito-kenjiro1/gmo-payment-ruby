@@ -569,7 +569,7 @@ module GMO
       end
 
       def search_recurring(options = {})
-        name = "SearchRecurring.idPass.idPass"
+        name = "SearchRecurring.idPass"
         required = [:recurring_id]
         assert_required_options(required, options)
         post_request name, options
