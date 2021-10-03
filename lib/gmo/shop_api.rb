@@ -575,6 +575,13 @@ module GMO
         post_request name, options
       end
 
+      def search_recurring_result_file(options = {})
+        name = "SearchRecurringResultFile.idPass.idPass"
+        required = [:method, :charge_date]
+        assert_required_options(required, options)
+        post_request name, options
+      end
+
       private
 
         def api_call(name, args = {}, verb = "post", options = {})
