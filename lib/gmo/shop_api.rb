@@ -576,7 +576,7 @@ module GMO
       end
 
       def search_recurring_result_file(options = {})
-        name = "SearchRecurringResultFile.idPass.idPass"
+        name = "SearchRecurringResultFile.idPass"
         required = [:method, :charge_date]
         assert_required_options(required, options)
         post_request name, options
